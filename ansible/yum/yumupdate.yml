@@ -1,0 +1,9 @@
+---
+- name: updating the server
+  hosts: centos
+  become: yes
+  tasks:
+    - name: starting to update
+      yum:
+        name: '*'
+        state: latest

@@ -1,0 +1,9 @@
+---
+- name: Updating the python packages
+  hosts: all
+  become: yes
+  tasks:
+    - name: updating the python
+      yum:
+        name: python3
+        state: latest

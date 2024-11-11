@@ -1,0 +1,13 @@
+---
+- name: installing tuned
+  hosts: centos
+  become: 1
+  tasks:
+    - name: installing
+      yum:
+        name: tuned
+        state: present
+    - name : start tuned service
+      service:
+        name: tuned
+        state: started
